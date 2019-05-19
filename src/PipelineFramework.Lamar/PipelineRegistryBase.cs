@@ -3,9 +3,9 @@ using PipelineFramework.Abstractions;
 
 namespace PipelineFramework.Lamar
 {
-    public class PipelineComponentResolverRegistryBase : ServiceRegistry
+    public abstract class PipelineRegistryBase : ServiceRegistry
     {
-        public PipelineComponentResolverRegistryBase()
+        protected PipelineRegistryBase()
         { 
             For<IPipelineComponentResolver>().Use<PipelineComponentResolver>().Singleton();
         }
